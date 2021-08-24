@@ -15,11 +15,11 @@ public class FitTest {
     }
 
     @Test
-    public void whenHeight173Then8394() {
+    public void whenHeight173Then7244() {
         short in = 173;
-        double expected = 83.94;
+        double expected = 72.44;
         double delta = 0.01;
-        double actual = Fit.manWeight(in);
+        double actual = Fit.womanWeight(in);
         Assert.assertEquals(expected, actual, delta);
     }
 }
