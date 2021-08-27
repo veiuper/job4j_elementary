@@ -30,14 +30,6 @@ public class PrimeNumberTest {
     }
 
     @Test
-    public void when1() {
-        int in = 1;
-        int expected = 0;
-        int actual = PrimeNumber.calc(in);
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void whenMinus1() {
         int in = -1;
         int expected = 0;
