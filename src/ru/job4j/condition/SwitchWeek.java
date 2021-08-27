@@ -4,16 +4,36 @@ public class SwitchWeek {
 
     public static String nameOfDay(int day) {
 
-        return switch (day) {
-            case 1 -> "Понедельник";
-            case 2 -> "Вторник";
-            case 3 -> "Среда";
-            case 4 -> "Четверг";
-            case 5 -> "Пятница";
-            case 6 -> "Суббота";
-            case 7 -> "Воскресенье";
-            default -> "Ошибка";
-        };
+        String rsl;
+
+        switch (day) {
+            case 1:
+                rsl = "Понедельник";
+                break;
+            case 2:
+                rsl = "Вторник";
+                break;
+            case 3:
+                rsl = "Среда";
+                break;
+            case 4:
+                rsl = "Четверг";
+                break;
+            case 5:
+                rsl = "Пятница";
+                break;
+            case 6:
+                rsl = "Суббота";
+                break;
+            case 7:
+                rsl = "Воскресенье";
+                break;
+            default:
+                rsl = "Ошибка";
+                break;
+        }
+
+        return rsl;
     }
 
     public static void main(String[] args) {
