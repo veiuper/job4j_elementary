@@ -9,8 +9,8 @@ public class ArrayLoop {
         for (int i = 0; i < array.length; i++) {
             array[i] = 2 * i + 3;
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (int value : array) {
+            System.out.println(value);
         }
     }
 }
