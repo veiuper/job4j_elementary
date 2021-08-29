@@ -88,4 +88,30 @@ public class MatrixCheckTest {
         char[] actual = MatrixCheck.extractDiagonal(board);
         Assert.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void whenDataMonoByTrueThenTrue() {
+        char[][] board = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
+        };
+        boolean actual = MatrixCheck.isWin(board);
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void whenDataHMonoByTrueThenTrue() {
+        char[][] board = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
+        };
+        boolean actual = MatrixCheck.isWin(board);
+        Assert.assertTrue(actual);
+    }
 }
