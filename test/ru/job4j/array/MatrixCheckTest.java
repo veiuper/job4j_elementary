@@ -52,4 +52,40 @@ public class MatrixCheckTest {
         boolean actual = MatrixCheck.monoVertical(board, column);
         Assert.assertFalse(actual);
     }
+
+    @Test
+    public void whenDiagonalFullX() {
+        char[][] board = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'}
+        };
+        char[] expected = {'X', 'X', 'X'};
+        char[] actual = MatrixCheck.extractDiagonal(board);
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void whenDiagonalFull1() {
+        char[][] board = {
+                {'1', ' ', ' '},
+                {' ', '1', ' '},
+                {' ', ' ', '1'}
+        };
+        char[] expected = {'1', '1', '1'};
+        char[] actual = MatrixCheck.extractDiagonal(board);
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void whenDiagonalMix() {
+        char[][] board = {
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'}
+        };
+        char[] expected = {'X', 'Y', 'Z'};
+        char[] actual = MatrixCheck.extractDiagonal(board);
+        Assert.assertArrayEquals(expected, actual);
+    }
 }
