@@ -9,14 +9,10 @@ public class Machine {
         int[] array = new int[100];
         int size = 0;
         int balance = money - price;
-        for (int i = 0; i < coins.length; i++) {
-            while (balance - coins[i] >= 0) {
-                balance -= coins[i];
-                size++;
-                array[size - 1] = coins[i];
-            }
-            if (balance <= 0) {
-                break;
+        for (int value : coins) {
+            while (balance - value >= 0) {
+                balance -= value;
+                array[size++] = value;
             }
         }
         return Arrays.copyOf(array, size);
