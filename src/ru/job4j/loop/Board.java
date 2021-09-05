@@ -3,7 +3,6 @@ package ru.job4j.loop;
 public class Board {
 
     public static void paint(int width, int height) {
-
         for (int row = 0; row < width; row++) {
             for (int cell = 0; cell < height; cell++) {
                 if ((row + cell) % 2 == 0) {
@@ -17,7 +16,6 @@ public class Board {
     }
 
     public static void main(String[] args) {
-
         Board.paint(3, 3);
         System.out.println();
         Board.paint(5, 5);

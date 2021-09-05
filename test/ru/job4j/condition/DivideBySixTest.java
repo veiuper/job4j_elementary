@@ -36,5 +36,4 @@ public class DivideBySixTest {
         String actual = DivideBySix.checkNumber(in);
         Assert.assertEquals(expected, actual);
     }
-
 }

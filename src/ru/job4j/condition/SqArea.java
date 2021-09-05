@@ -3,8 +3,7 @@ package ru.job4j.condition;
 public class SqArea {
 
     public static double sqarea(double p, double k) {
-        double rsl = k * Math.pow((p / (2 * (k + 1))), 2);
-        return rsl;
+        return k * Math.pow((p / (2 * (k + 1))), 2);
     }
 
     public static void main(String[] args) {

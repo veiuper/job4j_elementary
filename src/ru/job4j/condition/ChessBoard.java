@@ -9,7 +9,6 @@ public class ChessBoard {
                 && x2 >= 0 && x2 <= 7
                 && y2 >= 0 && y2 <= 7
                 && delta == Math.abs(y1 - y2);
-
         return valid ? delta : 0;
     }
 }
